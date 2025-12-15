@@ -14,18 +14,18 @@ embabel:
     scan-packages:
       - com.embabel.benchmark
   models:
-    default-llm: qwen3-4b-instruct-2507-mlx
+    default-llm: openai/gpt-oss-20b
 
 benchmark:
   default-prompt:
     - "Explain quantum computing in simple terms."
 
-  iterations: 3
+  iterations: 100
 
   timeout-seconds: 120
 
-  mlx-model: qwen3-4b-instruct-2507-mlx
-  ollama-model: hopephoto/Qwen3-4B-Instruct-2507_q8:latest
+  mlx-model: granite-4.0-h-tiny-mlx@4bit
+  ollama-model: granite4:tiny-h
   judge-model: openai/gpt-oss-20b
 
 # Logging
